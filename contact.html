@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/bakery-logo_c.png" alt="North Star Bakery logo" width="150">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="current" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Contact Us</h1>
+            <p>Send us a pre-order or a question and we'll email you back. Please give us at least 2 days for pre-orders.</p>
+        </section>
+
+        <div class="contact-layout">
+            <section class="form-area">
+                <h2>Pre-Order / Questions</h2>
+                <!-- form -->
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Pre-Order Request</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="date">Pickup Date:</label>
+                        <input type="date" id="date" name="date">
+
+                        <label for="type">Request Type:</label>
+                        <select id="type" name="type" required>
+                            <option value="">Select one</option>
+                            <option value="preorder">Pre-order</option>
+                            <option value="question">General Question</option>
+                        </select>
+
+                        <label for="items">Item Details:</label>
+                        <textarea id="items" name="items" rows="4" required></textarea>
+
+                        <label for="allergy">Allergy Notes:</label>
+                        <textarea id="allergy" name="allergy" rows="3"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </section>
+
+            <div class="info">
+                <section class="card">
+                    <h2>Location</h2>
+                    <p>1420 Maple Street<br>
+                    Minneapolis, MN 55408</p>
+                </section>
+
+                <section class="card">
+                    <h2>Hours</h2>
+                    <p>Mon: Closed<br>
+                    Tue-Fri: 6:30am-6pm<br>
+                    Sat: 7am-4pm<br>
+                    Sun: 8am-2pm</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2026 North Star Bakery</p>
+    </footer>
+</body>
+</html>
