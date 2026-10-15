@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/bakery-logo_c.png" alt="North Star Bakery logo" width="150">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Our Products</h1>
+            <p>Prices are ranges. We don't have online checkout, you pay when you pick up your order.</p>
+            <p>Planning a pre-order? Press <strong>+ Add</strong> next to anything below to build your list, then send it to us from the Contact page.</p>
+        </section>
+
+        <div class="photos">
+            <img src="images/bakery-bread_c.png" alt="loaves of bread in the display case" width="300">
+            <figure>
+                <img src="images/bakery-signature-loaf_c.png" alt="our signature sourdough loaf wrapped in a towel" width="300">
+                <figcaption>Signature Loaf - North Star Sourdough</figcaption>
+            </figure>
+        </div>
+
+        <div class="cards">
+            <section class="card">
+                <h2>Breads</h2>
+                <ul>
+                    <li data-id="sourdough">Sourdough - our most popular bread, $9-$11</li>
+                    <li data-id="seeded-rye">Seeded Rye - rye with sunflower and flax seeds, $8-$10</li>
+                    <li data-id="baguettes">Baguettes and rolls - good for dinners, $4-$12</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Pastries</h2>
+                <ul>
+                    <li data-id="croissants">Croissants - flaky and buttery, $3.75-$4.75</li>
+                    <li data-id="danishes">Danishes - with seasonal fruit, $4-$5</li>
+                    <li data-id="cookies">Cookies - chocolate chunk, sugar, shortbread, $2.50-$3.50</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Cakes</h2>
+                <ul>
+                    <li data-id="layer-cake">Layer cakes - chocolate, vanilla or carrot, $36-$58</li>
+                    <li data-id="cupcakes">Cupcakes - by the dozen, $30-$42</li>
+                    <li data-id="custom-cake">Custom cakes - for birthdays and events, starting at $65</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- pre-order list (filled in by js/products.js) -->
+        <section class="card preorder-list" aria-labelledby="list-heading">
+            <h2 id="list-heading">My Pre-Order List <span id="list-count" class="list-count"></span></h2>
+            <p id="list-empty">Your list is empty. Press "+ Add" next to an item above to start a pre-order.</p>
+            <ul id="list-items" class="list-items" aria-live="polite"></ul>
+            <p id="list-total" class="list-total" aria-live="polite"></p>
+            <div id="list-actions" class="list-actions" hidden>
+                <a class="button" href="contact.html">Send My List</a>
+                <button type="button" id="clear-list" class="text-btn">Clear list</button>
+            </div>
+            <p class="list-note">Your list is saved on this device, so it will still be here if you leave and come back.</p>
+        </section>
+
+        <p class="center"><a class="button" href="contact.html">Pre-Order Something</a></p>
+    </main>
+    <footer>
+        <p>Copyright 2026 North Star Bakery</p>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
