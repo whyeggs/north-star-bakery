@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/bakery-logo_c.png" alt="North Star Bakery logo" width="150">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="current" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Contact Us</h1>
+            <p>Send us a pre-order or a question and we'll email you back. Please give us at least 2 days for pre-orders.</p>
+        </section>
+
+        <div class="contact-layout">
+            <section class="form-area">
+                <h2>Pre-Order / Questions</h2>
+                <!-- form (checked by js/contact.js, novalidate turns off the browser's
+                     pop-up bubbles so my own messages show next to each field) -->
+                <form id="preorder-form" action="#" method="post" novalidate>
+                    <p id="welcome-note" class="form-note" hidden></p>
+                    <fieldset>
+                        <legend>Pre-Order Request</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+                        <p class="error" id="name-error"></p>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+                        <p class="error" id="email-error"></p>
+
+                        <label for="type">Request Type:</label>
+                        <select id="type" name="type" required aria-describedby="type-error">
+                            <option value="">Select one</option>
+                            <option value="preorder">Pre-order</option>
+                            <option value="question">General Question</option>
+                        </select>
+                        <p class="error" id="type-error"></p>
+
+                        <label for="date">Pickup Date:</label>
+                        <p class="hint" id="date-hint">Needed for pre-orders. We need at least 2 days' notice and we're closed Mondays.</p>
+                        <input type="date" id="date" name="date" aria-describedby="date-hint date-error">
+                        <p class="error" id="date-error"></p>
+
+                        <label for="items">Item Details:</label>
+                        <p id="list-note" class="form-note" hidden>We filled this in from your pre-order list on the <a href="products.html">Products page</a>. You can still change it here.</p>
+                        <textarea id="items" name="items" rows="5" required aria-describedby="items-error"></textarea>
+                        <p class="error" id="items-error"></p>
+
+                        <label for="allergy">Allergy Notes:</label>
+                        <p class="hint" id="allergy-hint">Optional, up to 300 characters.</p>
+                        <textarea id="allergy" name="allergy" rows="3" aria-describedby="allergy-hint allergy-error"></textarea>
+                        <p class="error" id="allergy-error"></p>
+
+                        <label class="checkbox" for="remember">
+                            <input type="checkbox" id="remember" name="remember">
+                            Remember my name and email on this device
+                        </label>
+
+                        <input type="submit" value="Submit">
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    </fieldset>
+                </form>
+            </section>
+
+            <div class="info">
+                <section class="card">
+                    <h2>Location</h2>
+                    <p>1420 Maple Street<br>
+                    Minneapolis, MN 55408</p>
+                </section>
+
+                <section class="card">
+                    <h2>Hours</h2>
+                    <p>Mon: Closed<br>
+                    Tue-Fri: 6:30am-6pm<br>
+                    Sat: 7am-4pm<br>
+                    Sun: 8am-2pm</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2026 North Star Bakery</p>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

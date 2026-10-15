@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/bakery-logo_c.png" alt="North Star Bakery logo" width="150">
+        <!-- nav bar -->
+        <nav>
+            <ul>
+                <li><a class="current" href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Welcome to North Star Bakery!</h1>
+            <p>We are a small neighborhood bakery. We make bread, pastries and cakes fresh everyday. Come visit us or send us a pre-order!</p>
+            <a class="button" href="contact.html">Send a Pre-Order</a>
+        </section>
+
+        <section>
+            <h2>What we're known for</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Sourdough</h3>
+                    <p>Our country sourdough is baked fresh every morning.</p>
+                </div>
+                <div class="card">
+                    <h3>Croissants</h3>
+                    <p>Flaky butter croissants and other pastries for your morning coffee.</p>
+                </div>
+                <div class="card">
+                    <h3>Custom Cakes</h3>
+                    <p>Cakes for birthdays, parties and events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Item of the Week</h2>
+            <div class="row">
+                <!-- responsive image -->
+                <picture>
+                    <source media="(min-width:650px)" srcset="images/bakery-feature-large_c.png">
+                    <img src="images/bakery-feature-small_c.png" alt="chocolate chunk cookies in the bakery case" width="300">
+                </picture>
+                <div>
+                    <h3>Chocolate Chunk Cookies</h3>
+                    <p>$3 each or $30 a dozen. They usually sell out by the afternoon, so pre-order a dozen if you want them!</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Hours and Location</h2>
+            <div class="row">
+                <img src="images/bakery-storefront_c.png" alt="front of the bakery with bread in the window" width="300">
+                <div>
+                    <p>1420 Maple Street, Minneapolis MN</p>
+                    <p>Tue-Fri 6:30am-6pm<br>
+                    Sat 7am-4pm<br>
+                    Sun 8am-2pm<br>
+                    Closed Mondays</p>
+                    <a href="contact.html">More info on our contact page</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 North Star Bakery</p>
+    </footer>
+</body>
+</html>
